@@ -61,17 +61,17 @@ function Home_banner({ onSearch }) {
 
       <div className="relative z-10 w-full max-w-7xl mx-auto text-center mt-2 py-16">
         <h1 className="text-white font-extrabold text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
-          Create Lasting Wealth Through Realshed
+          Your Dream Property Starts Here
         </h1>
 
         <p className="text-white/90 mt-4 text-sm sm:text-base md:text-lg max-w-3xl mx-auto">
-          Amet consectetur adipisicing elit sed do eiusmod.
+          Buy, Sell properties with confidence. Explore verified listings in prime locations.
         </p>
 
         <div className="mt-10 max-w-6xl mx-auto">
           <div className="flex justify-center">
             <div className="inline-flex rounded-t-xl overflow-hidden shadow-md">
-              <button
+              {/* <button
                 type="button"
                 onClick={() => setActiveTab("buy")}
                 className={`px-8 py-4 font-semibold ${activeTab === "buy"
@@ -80,9 +80,9 @@ function Home_banner({ onSearch }) {
                   }`}
               >
                 BUY
-              </button>
+              </button> */}
 
-              <button
+              {/* <button
                 type="button"
                 onClick={() => setActiveTab("rent")}
                 className={`px-8 py-4 font-semibold ${activeTab === "rent"
@@ -91,7 +91,7 @@ function Home_banner({ onSearch }) {
                   }`}
               >
                 RENT
-              </button>
+              </button> */}
             </div>
           </div>
 

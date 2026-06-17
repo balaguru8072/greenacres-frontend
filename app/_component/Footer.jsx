@@ -36,11 +36,11 @@ export default function Footer() {
               <h3 className="mb-5 text-2xl font-semibold text-gray-900">About</h3>
               <div className="space-y-4 text-gray-600 leading-7">
                 <p>
-                  Lorem ipsum dolor amet consetetur adi pisicing elit sed eiusm
-                  tempor in cididunt ut labore dolore magna aliqua enim ad minim venitam
+                  <span>GreCreas Delta</span> is your trusted partner in real estate, helping you buy, sell, 
+                    and invest in properties with confidence
                 </p>
                 <p>
-                  Quis nostrud exercita laboris nisi ut aliquip commodo.
+                  We are committed to delivering quality service, transparency, and value in every transaction.
                 </p>
               </div>
             </div>

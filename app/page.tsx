@@ -4,6 +4,7 @@ import WhileYouAreHere from "./_component/_homePages/WhileYouAreHere";
 import LatestNews from "./_component/_homePages/LatestNews";
 import ContactSection from "./_component/_contact/_contactUs/ContactSection";
 import HomeClient from "./HomeClient";
+import PageNotFound from "./pagenotfound";
 
 async function getData() {
   await new Promise((resolve) => setTimeout(resolve, 3000));
@@ -19,7 +20,8 @@ export default async function HomePage() {
       <WhileYouAreHere />
       <LatestNews />
       <ContactSection /> */}
-      <HomeClient />
+      {/* <HomeClient /> */}
+      <PageNotFound/>
     </div>
   );
 }

@@ -106,7 +106,7 @@ function Header() {
       >
         <div className="flex gap-6 md:gap-12 items-center">
           <Link href={generateRandomPath("/")}>
-            <Image src="/logo.svg" alt="Logo" width={150} height={150} />
+            <Image src="/logo-greenacresdelta.png" alt="Logo" width={45} height={45} />
           </Link>
 
           <ul className="hidden md:flex gap-10 text-[16px] font-medium text-slate-700">
