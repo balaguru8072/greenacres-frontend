@@ -15,7 +15,7 @@ export default function HomeClient() {
       <Home_banner onSearch={setFilters} />
       <Listing filters={filters} />
       <WhileYouAreHere />
-      <LatestNews />
+      {/* <LatestNews /> */}
       <ContactSection />
     </div>
   );
