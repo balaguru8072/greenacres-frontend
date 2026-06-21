@@ -1,4 +1,4 @@
-export default function ComingSoon() {
+export default function PageNotFound() {
   return (
     <div style={{
       minHeight: '100vh',

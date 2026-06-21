@@ -15,7 +15,7 @@ export default function ContactSection() {
   };
 
   const getFieldStyle = (fieldName) =>
-    activeField === fieldName ? focusStyle : {};
+    activeField === fieldName? focusStyle : {};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,7 +34,7 @@ export default function ContactSection() {
     };
 
     try {
-      const res = await fetch("http://localhost:5000/api/contacts", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contacts`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -150,7 +150,7 @@ export default function ContactSection() {
                     className="inline-flex items-center justify-center rounded-md bg-[#3628a0] px-[30px] py-[14px] text-[16px] font-semibold text-white transition hover:bg-[#1d2534] disabled:cursor-not-allowed disabled:opacity-60"
                     type="submit"
                   >
-                    {loading ? "Sending..." : "Send Message"}
+                    {loading? "Sending..." : "Send Message"}
                   </button>
                 </div>
               </div>

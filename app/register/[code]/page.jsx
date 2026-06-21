@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -14,6 +14,7 @@ export default function RegisterPage() {
     name: "",
     email: "",
     password: "",
+    mobile_number: "", // ✅ Idha add pannu
   });
 
   const handleChange = (e) => {
@@ -27,7 +28,9 @@ export default function RegisterPage() {
     e.preventDefault();
 
     try {
-      const res = await axios.post(`${BASE_URL}/api/users/register`, formData);
+      const res = await axios.post(`${BASE_URL}/api/users/register`, formData, {
+        withCredentials: true, // ✅ Cookie ku must
+      });
 
       if (res.data.token) {
         localStorage.setItem("token", res.data.token);
@@ -64,6 +67,17 @@ export default function RegisterPage() {
           placeholder="Email"
           className="w-full border p-3 rounded-lg mb-4"
           value={formData.email}
+          onChange={handleChange}
+          required
+        />
+
+        {/* ✅ Mobile Number Input Add Pannu */}
+        <input
+          type="tel"
+          name="mobile_number"
+          placeholder="Mobile Number"
+          className="w-full border p-3 rounded-lg mb-4"
+          value={formData.mobile_number}
           onChange={handleChange}
           required
         />

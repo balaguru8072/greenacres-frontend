@@ -326,10 +326,12 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { MapPin, BedDouble, Bath, Ruler } from "lucide-react";
+import { MapPin, BedDouble, Bath, Ruler, Car } from "lucide-react";
 import { motion } from "framer-motion";
+import axios from "axios";
+import Image from "next/image";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export default function Listing({ filters }) {
   const router = useRouter();
@@ -337,12 +339,26 @@ export default function Listing({ filters }) {
   const [properties, setProperties] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // ✅ Cookie auth check panna function
+  const checkAuth = async () => {
+    try {
+      const res = await axios.get(`${BASE_URL}/api/users/profile`, {
+        withCredentials: true,
+      });
+      if (res.data.success) {
+        setIsLoggedIn(true);
+      }
+    } catch (error) {
+      setIsLoggedIn(false);
+    }
+  };
 
   const handleProductClick = (id) => {
-    const token = localStorage.getItem("token");
     const path = `/view-listing/${id}`;
 
-    if (!token) {
+    if (!isLoggedIn) {
       router.push(`/login?redirect=${encodeURIComponent(path)}`);
       return;
     }
@@ -354,6 +370,7 @@ export default function Listing({ filters }) {
     const fetchListings = async () => {
       try {
         setLoading(true);
+        setError(null);
 
         const response = await fetch(`${BASE_URL}/api/listings`);
         const listingData = await response.json();
@@ -364,23 +381,42 @@ export default function Listing({ filters }) {
 
         const apiList = listingData.data || listingData.listing || [];
 
-        const mapped = apiList.map((item) => ({
-          id: item._id,
-          image: item.images?.[0]
-            ? `${BASE_URL}${item.images[0]}`
-            : "/assets/images/no-image.jpg",
-          status: item.type === "Sale" ? "For Sale" : "For Rent",
-          type: item.type,
-          price: item.price,
-          title: `${item.bedroom}BHK ${item.propertytype}`,
-          propertytype: item.propertytype,
-          address: item.address,
-          description: item.description,
-          area: item.area,
-          bedroom: item.bedroom,
-          bathroom: item.bathroom,
-          parking: item.parking,
-        }));
+        // ✅ Idha maathinen - {} potu return pannen
+        const mapped = apiList.map((item) => {
+          console.log("DB Image:", item.images?.[0]); // ✅ Ippo work aagum
+          console.log("BASE_URL:", BASE_URL);
+          console.log("Final URL:", `${BASE_URL}${item.images?.[0]}`);
+
+          // ✅ Slash handle panna code
+          const imagePath = item.images?.[0];
+          let imageUrl = "/assets/images/no-image.jpg";
+
+          if (imagePath) {
+            if (imagePath.startsWith("/")) {
+              imageUrl = `${BASE_URL}${imagePath}`;
+            } else if (imagePath.startsWith("uploads/")) {
+              imageUrl = `${BASE_URL}/${imagePath}`;
+            } else {
+              imageUrl = `${BASE_URL}/uploads/${imagePath}`;
+            }
+          }
+
+          return {
+            id: item._id,
+            image: imageUrl, // ✅ Idha use pannu, kelaki irukkuradhu delete pannu
+            status: item.type === "Sale" ? "For Sale" : "For Rent",
+            type: item.type,
+            price: item.price,
+            title: `${item.bedroom}BHK ${item.propertytype}`,
+            propertytype: item.propertytype,
+            address: item.address,
+            description: item.description,
+            area: item.area,
+            bedroom: item.bedroom,
+            bathroom: item.bathroom,
+            parking: item.parking,
+          };
+        });
 
         setProperties(mapped);
       } catch (err) {
@@ -391,6 +427,7 @@ export default function Listing({ filters }) {
     };
 
     fetchListings();
+    checkAuth();
   }, []);
 
   const filteredProperties = useMemo(() => {
@@ -446,7 +483,7 @@ export default function Listing({ filters }) {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-20 text-slate-500">
-        Loading properties...
+        <span className="text-sm">Loading properties...</span>
       </div>
     );
   }
@@ -482,9 +519,11 @@ export default function Listing({ filters }) {
               viewport={{ once: false, amount: 0.2 }}
               custom={index}
             >
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
+                width={800}
+                height={200}
                 className="rounded-lg object-cover h-[180px] w-full"
               />
 
@@ -525,6 +564,13 @@ export default function Listing({ filters }) {
                     <Ruler className="h-4 w-4" />
                     {item.area} sqft
                   </div>
+
+                  {item.parking > 0 && (
+                    <div className="flex gap-2 w-full bg-gray-100 rounded-md p-2 text-gray-600 justify-center items-center text-sm">
+                      <Car className="h-4 w-4" />
+                      {item.parking}
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>

@@ -5,17 +5,17 @@ import { withRandomPath } from "@/lib/randomPath";
 export default function AboutSection() {
   return (
     <section className="relative py-[70px] md:py-[120px]">
-      
+
       {/* Container */}
       <div className="container mx-auto px-4">
-        
+
         <div className="relative pb-[70px] md:pb-[120px] border-b border-[#e5e7ec]">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
-            
+
             {/* Image Section */}
             <div>
               <div className="relative block pl-0 lg:pl-[130px]">
-                
+
                 {/* Image */}
                 <div className="relative overflow-hidden rounded-[10px] group">
                   <Image
@@ -49,24 +49,25 @@ export default function AboutSection() {
                 <div className="mb-4">
                   <h5 className="text-primary font-semibold">About</h5>
                   <h2 className="text-2xl md:text-4xl font-bold">
-                    Hi, I’m Jessica Blake
+                    Find Your Perfect Space
                   </h2>
                 </div>
 
                 <div className="text-gray-600 space-y-4">
                   <p>
-                    Dolor sit amet consectetur elit sed do eiusmod tempor
-                    incididunt labore et dolore magna aliqua enim ad minim veniam.
+                    At GreCreas Delta, we help individuals, families, and investors discover the right property with confidence.
+                     Whether youre buying your dream home, selling a property, or exploring investment opportunities, our experienced team is committed to delivering reliable guidance and exceptional service.
                   </p>
                   <p>
-                    Dolor in reprehenderit in voluptate velit esse cillum dolore
-                    eu fugiat nulla pariatur excepteur sint occaecat.
+                    My goal is to build lasting relationships by delivering transparency, integrity, and value in every transaction.
                   </p>
                 </div>
 
                 <ul className="mt-4 space-y-2">
-                  <li>✔ consectetur elit sed do eius</li>
-                  <li>✔ consectetur elit sed</li>
+                  <li>✔ Trusted Real Estate Professionals</li>
+                  <li>✔ Quality Property Solutions</li>
+                  <li>✔ Transparent Transactions</li>
+                  <li>✔ Exceptional Customer Service</li>
                 </ul>
 
                 <div className="mt-6">

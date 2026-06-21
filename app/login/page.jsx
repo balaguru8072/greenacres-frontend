@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import axios from "axios";
 import { withRandomPath } from "@/lib/randomPath";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export default function LoginPage() {
   const router = useRouter();
@@ -16,21 +16,32 @@ export default function LoginPage() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
+    setLoading(true);
+    
     try {
-      const res = await axios.post(`${BASE_URL}/api/users/login`, {
-        email,
-        password,
-      });
+      // ✅ formData illa, { email, password } anuppanum
+      const res = await axios.post(
+        `${BASE_URL}/api/users/login`,
+        { email, password }, // ✅ Idhu correct
+        {
+          withCredentials: true, // ✅ Cookie save panna must
+        }
+      );
 
-      localStorage.setItem("token", res.data.token);
+      // ❌ localStorage la token store panna koodadhu
+      // Cookie la dhaan token irukku
 
-      router.replace(redirectPath);
+      alert("Login successful");
+      router.push(redirectPath); // ✅ redirectPath use pannu
     } catch (error) {
+      console.log("Login error:", error.response?.data);
       alert(error.response?.data?.message || "Login failed");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -71,9 +82,10 @@ export default function LoginPage() {
 
         <button
           type="submit"
-          className="w-full bg-purple-600 text-white p-3 rounded-lg"
+          disabled={loading}
+          className="w-full bg-purple-600 text-white p-3 rounded-lg disabled:opacity-50"
         >
-          Login
+          {loading ? "Logging in..." : "Login"}
         </button>
 
         <p className="text-center mt-5 text-sm">

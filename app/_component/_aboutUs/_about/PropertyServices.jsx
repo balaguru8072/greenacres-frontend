@@ -24,7 +24,7 @@ const services = [
     id: 2,
     title: "Best Local Agents",
     description:
-      "Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.",
+      "Our experienced local agents provide expert market insights and help you find the right property at the right price.",
     icon: Users,
     color: "text-[#17c7d2] bg-[#e6fbfd]",
   },
@@ -32,7 +32,7 @@ const services = [
     id: 3,
     title: "Personalized Service",
     description:
-      "Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.",
+      "We understand your unique needs and offer tailored real estate solutions for buying, selling, and investing.",
     icon: Handshake,
     color: "text-[#f95757] bg-[#ffe9e9]",
   },
@@ -48,7 +48,7 @@ const services = [
     id: 5,
     title: "Best Local Agents",
     description:
-      "Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.",
+      "Our experienced local agents provide expert market insights and help you find the right property at the right price.",
     icon: Users,
     color: "text-[#d74eff] bg-[#fbe8ff]",
   },
@@ -56,7 +56,7 @@ const services = [
     id: 6,
     title: "Personalized Service",
     description:
-      "Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.",
+      "We understand your unique needs and offer tailored real estate solutions for buying, selling, and investing.",
     icon: Handshake,
     color: "text-[#17c7d2] bg-[#e6fbfd]",
   },

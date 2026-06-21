@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");

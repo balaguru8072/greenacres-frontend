@@ -5,7 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import axios from "axios";
 import ContactSection from "../../_component/_contact/_contactUs/ContactSection";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export default function ViewListingPage() {
   const { id } = useParams();
@@ -64,7 +64,7 @@ export default function ViewListingPage() {
       <img
         src={
           listing.images?.[0]
-            ? `${BASE_URL}${listing.images[0]}`
+          ? `${BASE_URL}${listing.images[0]}`
             : "/assets/images/no-image.jpg"
         }
         alt={listing.propertytype}
