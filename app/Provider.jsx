@@ -5,11 +5,11 @@ import Footer from "./_component/Footer"
 function Provider({ children }) {
     return (
         <div>
-            {/* <Header /> */}
+            <Header />
             <div className=''>
                 {children}
             </div>
-            {/* <Footer /> */}
+            <Footer />
         </div >
     )
 }

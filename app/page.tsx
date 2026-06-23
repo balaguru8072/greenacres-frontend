@@ -20,8 +20,8 @@ export default async function HomePage() {
       <WhileYouAreHere />
       <LatestNews />
       <ContactSection /> */}
-      {/* <HomeClient /> */}
-      <PageNotFound/>
+      <HomeClient />
+      {/* <PageNotFound/> */}
     </div>
   );
 }
