@@ -529,9 +529,9 @@ export default function Listing({ filters }) {
 
               <div className="flex mt-3 flex-col gap-2">
                 <div className="flex justify-between items-center">
-                  <h2 className="font-bold text-xl text-purple-600">
+                  {/* <h2 className="font-bold text-xl text-purple-600">
                     ₹{Number(item.price).toLocaleString()}
-                  </h2>
+                  </h2> */}
 
                   <span className="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full">
                     {item.status}
