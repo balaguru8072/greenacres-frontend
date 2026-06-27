@@ -189,7 +189,7 @@ export default function Preparatory() {
     //   </div>
     // </div>
     <div className="p-6 md:px-10">
-      <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-5">Preparatory Page</h1>
+      <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-5">Property Page</h1>
       <div>
         <Listing />
       </div>

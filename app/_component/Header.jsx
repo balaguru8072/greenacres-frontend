@@ -97,7 +97,7 @@ function Header() {
           <ul className="hidden md:flex gap-10 text-[16px] font-medium text-slate-700">
             <li><Link href="/">Home</Link></li>
             <li><Link href={withRandomPath("/aboutPages")}>About Us</Link></li>
-            <li><Link href={withRandomPath("/preparatoryPages")}>Preparatory</Link></li>
+            <li><Link href={withRandomPath("/preparatoryPages")}>Property</Link></li>
             <li><Link href={withRandomPath("/ContactPages")}>Contact Us</Link></li>
           </ul>
         </div>
@@ -148,7 +148,7 @@ function Header() {
         <div className="md:hidden fixed top-[76px] left-0 w-full bg-white shadow-lg z-40 p-5 flex flex-col gap-4">
           <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
           <Link href={withRandomPath("/aboutPages")} onClick={() => setIsOpen(false)}>About Us</Link>
-          <Link href={withRandomPath("/preparatoryPages")} onClick={() => setIsOpen(false)}>Preparatory</Link>
+          <Link href={withRandomPath("/preparatoryPages")} onClick={() => setIsOpen(false)}>Property</Link>
           <Link href={withRandomPath("/ContactPages")} onClick={() => setIsOpen(false)}>Contact Us</Link>
 
           {!user ? (
