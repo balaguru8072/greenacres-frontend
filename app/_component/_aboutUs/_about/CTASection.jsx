@@ -18,13 +18,6 @@ export default function CTASection() {
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link
-            href="/property-details"
-            className="px-6 py-3 border border-white text-white rounded-md hover:bg-white hover:text-black transition"
-          >
-            Rent Properties
-          </Link>
-
-          <Link
             href="/"
             className="px-6 py-3 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition"
           >

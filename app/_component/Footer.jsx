@@ -15,13 +15,13 @@ export default function Footer() {
       title: "The Added Value Social Worker",
       date: "Mar 25, 2020",
       image: "/assets/images/latest_news/home_2.jfif",
-      href: "/blog-details",
+      href: "/",
     },
     {
       title: "Ways to Increase Trust",
       date: "Mar 24, 2020",
       image: "/assets/images/latest_news/home_4.jpg",
-      href: "/blog-details",
+      href: "/",
     },
   ];
 
@@ -120,10 +120,10 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <Link href="/">
               <Image
-                src={"/logo.svg"}
+                src={"/logo-greenacresdelta-removebg.png"}
                 alt="Footer Logo"
-                width={140}
-                height={40}
+                width={50}
+                height={50}
                 className="object-contain"
               />
             </Link>
@@ -131,7 +131,7 @@ export default function Footer() {
               <Link href="/" className="font-semibold text-gray-900 hover:text-primary">
                 Stosimo
               </Link>{" "}
-              &copy; 2021 All Right Reserved
+              &copy; 2026 All Right Reserved
             </p>
           </div>
 

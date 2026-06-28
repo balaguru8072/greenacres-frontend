@@ -29,7 +29,6 @@ export default function FunfactSection() {
   const data = [
     { value: 1270, label: "Total Professionals" },
     { value: 2350, label: "Total Property Sell" },
-    { value: 2540, label: "Total Property Rent" },
     { value: 8270, label: "Total Customers" },
   ];
 
@@ -37,7 +36,7 @@ export default function FunfactSection() {
     <section className="relative">
       <div className="max-w-[1200px] mx-auto px-4">
         <div className="relative bg-white rounded-md shadow-lg -mt-[90px] z-10 py-10 px-6 md:px-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-center">
             
             {data.map((item, index) => (
               <div key={index} className="relative py-6">

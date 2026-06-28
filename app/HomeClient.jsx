@@ -9,6 +9,7 @@ import ContactSection from "./_component/_contact/_contactUs/ContactSection";
 import Testimonials from "./_component/_homePages/Testimonials";
 import HowItWorks from "./_component/_homePages/HowItWorks";
 import ServicesSection from "./_component/_homePages/ServicesSection";
+import AboutMore from "./_component/_aboutUs/_aboutmore/aboutmore";
 
 export default function HomeClient() {
   const [filters, setFilters] = useState(null);
@@ -16,6 +17,7 @@ export default function HomeClient() {
   return (
     <div>
       <Home_banner onSearch={setFilters} />
+      <AboutMore />
       <Listing filters={filters} />
       <WhileYouAreHere />
       <HowItWorks />
