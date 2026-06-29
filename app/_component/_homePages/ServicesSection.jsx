@@ -10,7 +10,7 @@ const services = [
     iconColor: 'text-blue-500',
     title: 'Property Management',
     description:
-      'We provide a range of services to property owners and landlords to help them effectively manage their real estate investments.',
+      'At Green Acres Delta, we provide property owners and landlords with efficient, transparent, and reliable management solutions. From tenant relations to financial oversight, our services are designed to protect your assets, maximize returns, and give you peace of mind',
   },
   {
     icon: Building2,
@@ -18,7 +18,7 @@ const services = [
     iconColor: 'text-orange-500',
     title: 'Home Buying',
     description:
-      'Planning to buy home? We offer a range of assistance to make the home buying process smoother and more convenient for the buyer.',
+      'At Green Acres Delta, we make home ownership simple and stress-free. Whether it’s your first home or a dream upgrade, our team provides tailored support — from property selection to closing — ensuring a smooth and transparent experience.',
   },
   {
     icon: Headset,
@@ -26,7 +26,7 @@ const services = [
     iconColor: 'text-blue-500',
     title: 'Consulting Service',
     description:
-      'A team of professionals to advice and expertise to individuals, businesses, or organizations involved in various aspects of the real estate industry.',
+      'At Green Acres Delta, our experts provide strategic guidance across the real estate industry. From market analysis and investment planning to compliance and portfolio optimization, we deliver tailored solutions that help clients make confident decisions and achieve lasting success.',
   },
 ];
 
@@ -101,14 +101,7 @@ export default function ServicesSection() {
                   {service.description}
                 </p>
                 
-                <motion.a
-                  href="#"
-                  whileHover={{ x: 4 }}
-                  className="text-teal-500 font-medium inline-flex items-center gap-1 transition-all"
-                >
-                  Read More
-                  <span>›</span>
-                </motion.a>
+                
               </motion.div>
             );
           })}

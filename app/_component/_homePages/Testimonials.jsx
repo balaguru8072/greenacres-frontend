@@ -21,22 +21,22 @@ const testimonials = [
     review:
       "The Emirates Real Estate team delivered on every promise and I would highly recommend them. Excellent service!",
   },
-  {
-    id: 3,
-    name: "Mika Gilmore",
-    role: "Happy Seller",
-    image: "/assets/images/testimonials/testimonials_1.jpg",
-    review:
-      "Selling my property was simple and stress-free. The team was professional and transparent throughout the process.",
-  },
-  {
-    id: 4,
-    name: "Susan Barkley",
-    role: "Happy Buyer, Italy",
-    image: "/assets/images/testimonials/testimonials_1.jpg",
-    review:
-      "Amazing experience from start to finish. I found my dream home quickly and smoothly.",
-  },
+  // {
+  //   id: 3,
+  //   name: "Mika Gilmore",
+  //   role: "Happy Seller",
+  //   image: "/assets/images/testimonials/testimonials_1.jpg",
+  //   review:
+  //     "Selling my property was simple and stress-free. The team was professional and transparent throughout the process.",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Susan Barkley",
+  //   role: "Happy Buyer, Italy",
+  //   image: "/assets/images/testimonials/testimonials_1.jpg",
+  //   review:
+  //     "Amazing experience from start to finish. I found my dream home quickly and smoothly.",
+  // },
 ];
 
 const containerVariants = {
@@ -78,7 +78,7 @@ export default function Testimonials() {
   return (
     <section className="bg-[#d9edf0] py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        
+
         {/* Badge */}
         <motion.span
           initial={{ opacity: 0, scale: 0.8 }}
@@ -97,9 +97,9 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-5xl lg:text-5xl font-bold text-[#062f5b] leading-tight"
+            className="text-[40px] font-bold text-[#062f5b] leading-tight"
           >
-            Sell With Emirates Real Estate Fast And Efficient
+            Fast, Efficient, and Professional — Sell with Green Acres Delta.
           </motion.h2>
 
           <motion.p
@@ -109,9 +109,8 @@ export default function Testimonials() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-[#163b68] flex items-center"
           >
-            Experience a smooth, transparent process designed to maximize
-            your property's value while minimizing your stress.
-            Sell smart, sell fast.
+            Experience a seamless and transparent process designed to maximize your property’s value while reducing stress. 
+            At Green Acres Delta, we help you sell smart and sell fast — with professionalism you can trust.
           </motion.p>
         </div>
 
@@ -121,20 +120,20 @@ export default function Testimonials() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid md:grid-cols-2 xl:grid-cols-4 gap-8"
+          className="grid md:grid-cols-2 xl:grid-cols-2 gap-8"
         >
           {testimonials.map((item) => (
             <motion.div
               key={item.id}
               variants={cardVariants}
-              whileHover={{ 
+              whileHover={{
                 y: -12,
                 transition: { duration: 0.3 }
               }}
               className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl transition-shadow duration-300"
             >
               {/* User Info */}
-              <div className="flex items-center gap-4 mb-8">
+              <div className="flex invisible  items-center gap-4 mb-8">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ duration: 0.3 }}
@@ -149,21 +148,21 @@ export default function Testimonials() {
                 </motion.div>
 
                 <div>
-                  <h3 className="text-2xl font-semibold text-[#062f5b]">
+                  <h3 className="text-2xl invisible  font-semibold text-[#062f5b]">
                     {item.name}
                   </h3>
-                  <p className="text-gray-600">{item.role}</p>
+                  <p className="text-gray-600 invisible ">{item.role}</p>
                 </div>
               </div>
 
               {/* Review */}
-              <p className="text-[#163b68] leading-8 mb-8">
+              <p className="text-[#163b68] invisible  leading-8 mb-8">
                 {item.review}
               </p>
 
               {/* Rating */}
-              <motion.div 
-                className="flex gap-1"
+              <motion.div
+                className="flex gap-1 invisible "
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}

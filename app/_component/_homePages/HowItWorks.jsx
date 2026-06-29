@@ -32,7 +32,7 @@ export default function HowItWorks() {
               strokeLinecap="round"
             />
             <circle cx="120" cy="420" r="5" fill="#2F4FEA" stroke="#DBEAFE" strokeWidth="6"/>
-            <circle cx="450" cy="214" r="5" fill="#2F4FEA" stroke="#DBEAFE" strokeWidth="6"/>
+            <circle cx="393" cy="265" r="5" fill="#2F4FEA" stroke="#DBEAFE" strokeWidth="6"/>
             <circle cx="820" cy="226" r="5" fill="#2F4FEA" stroke="#DBEAFE" strokeWidth="6"/>
             <circle cx="1150" cy="420" r="5" fill="#2F4FEA" stroke="#DBEAFE" strokeWidth="6"/>
           </svg>
@@ -46,11 +46,11 @@ export default function HowItWorks() {
               height={70}
               className="h-auto w-[100px]"
             />
-            <h3 className="mt-2 text-[28px] font-bold text-black">Launch</h3>
+            <h3 className="mt-2 text-[28px] font-bold text-black">Enquire</h3>
           </div>
 
           {/* Core - left: 360px; top: 175px; */}
-          <div className="absolute left-[360px] top-[175px] flex w-[280px] flex-col items-center text-center">
+          <div className="absolute  flex  flex-col items-center text-center" style={{ width: 'auto', left: '390px', top: '245px'}}>
             <Image
               src="/assets/images/howitworks/core.jpg"
               alt="Core"
@@ -58,10 +58,10 @@ export default function HowItWorks() {
               height={85}
               className="h-auto w-[110px]"
             />
-            <h3 className="mt-2 text-[28px] font-bold text-black">Core</h3>
-            <p className="mt-1 text-[14px] text-gray-900 leading-snug">
+            <h3 className="mt-2 text-[28px] font-bold text-black">response </h3>
+            {/* <p className="mt-1 text-[14px] text-gray-900 leading-snug">
               Strengthen business using reliable systems for consistent performance.
-            </p>
+            </p> */}
           </div>
 
           {/* Grow - top: 255px; */}
@@ -73,7 +73,7 @@ export default function HowItWorks() {
               height={80}
               className="h-auto w-[130px]"
             />
-            <h3 className="mt-2 text-[28px] font-bold text-black">Grow</h3>
+            <h3 className="mt-2 text-[28px] font-bold text-black">action</h3>
           </div>
 
           {/* Advance - top: 250px; left: 929px; */}
@@ -85,10 +85,10 @@ export default function HowItWorks() {
               height={90}
               className="h-auto w-[140px]"
             />
-            <h3 className="mt-2 text-[28px] font-bold text-black">Advance</h3>
-            <p className="mt-1 text-[14px] text-gray-900 leading-snug">
+            <h3 className="mt-2 text-[28px] font-bold text-black">resolve</h3>
+            {/* <p className="mt-1 text-[14px] text-gray-900 leading-snug">
               Elevate your success <br />and scale with innovative solutions.
-            </p>
+            </p> */}
           </div>
         </div>
 

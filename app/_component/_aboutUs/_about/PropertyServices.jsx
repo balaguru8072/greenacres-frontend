@@ -16,7 +16,7 @@ const services = [
     id: 1,
     title: "Excellent Reputation",
     description:
-      "Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.",
+      "At Green Acres Delta, our reputation is built on referrals and repeat clients, not advertisements. We earn trust through fair deals, legal clarity, and lasting relationships — with many clients returning for their second and third property.",
     icon: Award,
     color: "text-[#8e44ad] bg-[#f3e8ff]",
   },
@@ -24,7 +24,7 @@ const services = [
     id: 2,
     title: "Best Local Agents",
     description:
-      "Our experienced local agents provide expert market insights and help you find the right property at the right price.",
+      "At Green Acres Delta, our agents combine deep local expertise with real-time market insights to secure the best deals. Whether buying or renting, we guide you with knowledge of every lane and landmark, ensuring confident and informed decisions.",
     icon: Users,
     color: "text-[#17c7d2] bg-[#e6fbfd]",
   },
@@ -32,7 +32,7 @@ const services = [
     id: 3,
     title: "Personalized Service",
     description:
-      "We understand your unique needs and offer tailored real estate solutions for buying, selling, and investing.",
+      "At Green Acres Delta, we tailor every step of the real estate journey to your needs. Share your budget, timeline, and priorities — we’ll manage the shortlisting, negotiations, and paperwork so you only see properties that truly fit.",
     icon: Handshake,
     color: "text-[#f95757] bg-[#ffe9e9]",
   },
@@ -40,7 +40,7 @@ const services = [
     id: 4,
     title: "Excellent Reputation",
     description:
-      "Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.",
+      "At Green Acres Delta, our reputation is built on referrals and repeat clients, not advertisements. We earn trust through fair deals, legal clarity, and lasting relationships — with many clients returning for their second and third property.",
     icon: Award,
     color: "text-[#1398ff] bg-[#e8f4ff]",
   },
@@ -48,7 +48,7 @@ const services = [
     id: 5,
     title: "Best Local Agents",
     description:
-      "Our experienced local agents provide expert market insights and help you find the right property at the right price.",
+      "At Green Acres Delta, our agents combine deep local expertise with real-time market insights to secure the best deals. Whether buying or renting, we guide you with knowledge of every lane and landmark, ensuring confident and informed decisions.",
     icon: Users,
     color: "text-[#d74eff] bg-[#fbe8ff]",
   },
@@ -56,7 +56,7 @@ const services = [
     id: 6,
     title: "Personalized Service",
     description:
-      "We understand your unique needs and offer tailored real estate solutions for buying, selling, and investing.",
+      "At Green Acres Delta, we tailor every step of the real estate journey to your needs. Share your budget, timeline, and priorities — we’ll manage the shortlisting, negotiations, and paperwork so you only see properties that truly fit your requirements.",
     icon: Handshake,
     color: "text-[#17c7d2] bg-[#e6fbfd]",
   },

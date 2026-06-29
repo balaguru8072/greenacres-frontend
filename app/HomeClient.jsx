@@ -21,7 +21,7 @@ export default function HomeClient() {
       <Listing filters={filters} />
       <WhileYouAreHere />
       <HowItWorks />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <ServicesSection />
       {/* <LatestNews /> */}
       <ContactSection />

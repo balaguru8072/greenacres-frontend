@@ -31,14 +31,14 @@ export default function AboutSection() {
                 </div>
 
                 {/* Experience Box */}
-                <div className="relative lg:absolute lg:left-0 lg:bottom-[75px] w-full lg:w-[250px] text-center bg-[#1b1d21] rounded-[10px] px-[15px] py-[60px] mt-[30px] lg:mt-0 z-10">
+                {/* <div className="relative lg:absolute lg:left-0 lg:bottom-[75px] w-full lg:w-[250px] text-center bg-[#1b1d21] rounded-[10px] px-[15px] py-[60px] mt-[30px] lg:mt-0 z-10">
                   <h2 className="text-[55px] leading-[60px] font-bold text-[#2dbe6c] mb-2">
                     20
                   </h2>
                   <h4 className="text-[20px] leading-[30px] text-white font-medium">
                     Years of <br /> Experience
                   </h4>
-                </div>
+                </div> */}
 
               </div>
             </div>
@@ -55,12 +55,11 @@ export default function AboutSection() {
 
                 <div className="text-gray-600 space-y-4">
                   <p>
-                    At GreCreas Delta, we help individuals, families, and investors discover the right property with confidence.
-                     Whether youre buying your dream home, selling a property, or exploring investment opportunities, our experienced team is committed to delivering reliable guidance and exceptional service.
+                    At Green Acres Delta, we help individuals, families, and investors discover the right property with confidence.
+                    Whether buying your dream home, selling a property, or exploring investment opportunities, our experienced team delivers reliable guidance and exceptional service.
                   </p>
                   <p>
-                    My goal is to build lasting relationships by delivering transparency, integrity, and value in every transaction.
-                  </p>
+                    Our goal is to build lasting relationships through transparency, integrity, and value in every transaction                  </p>
                 </div>
 
                 <ul className="mt-4 space-y-2">

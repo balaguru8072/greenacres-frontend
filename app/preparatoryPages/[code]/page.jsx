@@ -9,8 +9,8 @@ function page() {
   return (
     <div className='mt-[100px] md:mt-[65px]'>
         <Preparatory />
-        <HowItWorks />
-        <ServicesSection />
+        {/* <HowItWorks />
+        <ServicesSection /> */}
         {/* <LatestNews /> */}
         <ContactSection />
     </div>

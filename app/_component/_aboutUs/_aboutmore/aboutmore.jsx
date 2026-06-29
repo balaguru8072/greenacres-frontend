@@ -36,22 +36,12 @@ export default function AboutMore() {
               Welcome To  <br /> Green Acres Delta
             </h2>
 
-            {/* Divider with Tagline */}
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-[2px] bg-[#C4A462]"></div>
-              <p className="text-gray-700 text-lg">
-                30+ Years of Trusted Real Estate Excellence
-              </p>
-            </div>
 
             {/* Description */}
             <p className="text-gray-600 leading-relaxed mb-8 text-base">
-              For over 30 years, Green Acres Delta has been helping families, investors, and businesses find the right properties in their local communities.
-              We specialize in the sale of residential plots, land properties, houses, apartments, and commercial spaces, offering reliable and transparent real estate solutions tailored to every client's needs.
-              With extensive market knowledge and a commitment to customer satisfaction, we have successfully completed numerous property transactions and built lasting relationships based on trust and professionalism.
+              At Green Acres Delta, we specialize in the sale of residential plots, land properties, houses, apartments, and commercial spaces. Our mission is to deliver reliable and transparent real estate solutions tailored to each client’s unique needs. Backed by extensive market expertise and a strong commitment to customer satisfaction, we have successfully facilitated numerous property transactions and built enduring relationships founded on trust and professionalism.
               <br /><br />
-              Whether you are buying your dream property or looking for the right investment opportunity, Green Acres Delta is here to guide you every step of the way.
-            </p>
+              Whether you are searching for your dream home or exploring strategic investment opportunities, Green Acres Delta is dedicated to guiding you through every step of the process with integrity and excellence.            </p>
 
             {/* CTA Button */}
             <button className="bg-[#C4A462] hover:bg-[#b39452] text-black p-3 font-semibold px-10 py-4 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg">

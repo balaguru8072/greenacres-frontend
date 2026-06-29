@@ -16,7 +16,7 @@ export default function ContactInfoSection() {
         </div>
 
         {/* Contact Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {/* Email Address */}
           <div className="group">
             <div className="relative block bg-white rounded-[10px] overflow-hidden shadow-[0_10px_30px_0_rgba(0,0,0,0.10)] px-[30px] md:px-[55px] pt-[96px] pb-[65px] transition-all duration-500 hover:-translate-y-[10px]">
@@ -64,7 +64,7 @@ export default function ContactInfoSection() {
                   href="tel:+23055873407"
                   className="text-[#a0a1a8] hover:text-[#43a047] transition-colors duration-300"
                 >
-                  +2(305) 587-3407
+                  +91 9843990686
                 </Link>
                 <br />
                 <Link
@@ -78,7 +78,7 @@ export default function ContactInfoSection() {
           </div>
 
           {/* Office Address */}
-          <div className="group">
+          {/* <div className="group">
             <div className="relative block bg-white rounded-[10px] overflow-hidden shadow-[0_10px_30px_0_rgba(0,0,0,0.10)] px-[30px] md:px-[55px] pt-[96px] pb-[65px] transition-all duration-500 hover:-translate-y-[10px]">
               <div className="relative inline-block mb-[26px] z-[1] text-[#f94c4c]">
                 <div className="absolute top-[-24px] right-[-33px] w-[65px] h-[65px] rounded-full bg-[#f94c4c] opacity-20 z-[-1] transition-all duration-500 group-hover:scale-150 group-hover:opacity-5"></div>
@@ -94,7 +94,7 @@ export default function ContactInfoSection() {
                 NY 10002
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+// If using Next.js, prefer next/image for optimization
+import Image from "next/image"; 
 
 export default function ContactSection() {
   const [activeField, setActiveField] = useState("");
@@ -159,16 +161,11 @@ export default function ContactSection() {
 
           <div>
             <div className="overflow-hidden rounded-[10px]">
-              <iframe
-                title="Mayiladuthurai Map"
-                src="https://www.google.com/maps?q=11.1035,79.6550&z=12&output=embed"
-                width="100%"
-                height="500"
-                className="h-[350px] w-full border-0 md:h-[500px]"
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+              <img 
+                src="/assets/images/contact/contact_imges.jpeg" 
+                alt="Customer support executive with headset"
+                className="h-[350px] w-full object-cover md:h-[500px]"
+              />
             </div>
           </div>
         </div>
